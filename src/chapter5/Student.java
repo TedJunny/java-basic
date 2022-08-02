@@ -6,6 +6,11 @@ public class Student {
     int grade;
     String address;
 
+    public Student(int id, String name) {
+        this.studentId = id;
+        this.name = name;
+    }
+
     public void showStudentInfo() {
         System.out.println(name+ ", " + address);
     }
