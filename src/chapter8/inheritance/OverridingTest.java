@@ -15,5 +15,7 @@ public class OverridingTest {
         Customer customer2 =  new VIPCustomer(100010, "Lee", 100);
         int price = customer2.calcPrice(10000);
         System.out.println("지불 금액은 " + price + "이고, " +customer2.showCustomerInfo());
+
+        Customer customer3 = new GoldCustomer();
     }
 }
