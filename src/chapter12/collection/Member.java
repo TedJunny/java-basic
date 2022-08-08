@@ -2,7 +2,7 @@ package chapter12.collection;
 
 import java.util.Collection;
 
-public class Member {
+public class Member implements Comparable<Member> {
     private int memberId;
     private String memberName;
 
@@ -49,5 +49,12 @@ public class Member {
     @Override
     public int hashCode() {
         return memberId;
+    }
+
+
+    @Override
+    public int compareTo(Member member) {
+        // 양수를 어떻게 만들어서 반환할 것인가 (기존에 있는 것이 더 크게 만들고 싶기 때문에 오름차순 정렬)
+        return (this.memberId - member.memberId);
     }
 }
